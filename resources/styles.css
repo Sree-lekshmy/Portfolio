@@ -131,6 +131,8 @@ body {
     transform: rotateY(10deg) rotateX(10deg) scale(1.05);
     box-shadow: 0.3125em 0.3125em 1em rgba(255, 255, 255, 0.2);
 }
+.hamburger {
+    display: none;}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -140,6 +142,49 @@ body {
     }
     .profile-pic {
         margin: 0 0 1.25em 0;
+    }
+    .menu {
+        display: none; /* Menu is hidden initially */
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        width: 50%;
+        text-align: right;
+        padding: .25em 0;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+        background-color: #000;
+    }
+
+    .menu a {
+        display: block;
+        padding: .25em;
+        color: white;
+        text-decoration: none;
+    }
+    .menu a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hamburger {
+        display: block; /* Show the icon on small screens */
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+        color: white;
+        z-index: 1000;
+    }
+
+    /* This ensures menu is displayed when 'show' class is added */
+    .menu.show {
+        display: flex !important;  
+        /*flex-direction: column;*/
+        transform: translateY(0); 
     }
 }
  /* Footer Styling */

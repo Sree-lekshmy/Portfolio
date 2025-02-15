@@ -20,24 +20,54 @@ function changeBackground() {
 changeBackground();
 setInterval(changeBackground, 3000);
 };
-document.addEventListener("mousemove", function(event) {
+/*document.addEventListener("mousemove", function(event) {
     let intro = document.querySelector("#intro-content");
     let x = (window.innerWidth / 2 - event.pageX) / 30; 
     let y = (window.innerHeight / 2 - event.pageY) / 30;
 
     intro.style.transform = `translate(${x}px, ${y}px)`;
 });
+*/
 
-let currentIndex = 0;
-const slides = document.querySelectorAll(".gallery-slide");
-const totalSlides = slides.length;
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM fully loaded");
 
-function showNextSlide() {
-    slides[currentIndex].style.display = "none"; // Hide current slide
-    currentIndex = (currentIndex + 1) % totalSlides; // Move to next slide
-    slides[currentIndex].style.display = "block"; // Show next slide
-}
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+    const menuLinks = document.querySelectorAll(".menu a"); // Select all menu links
 
-setInterval(showNextSlide, 3000); // Change image every 3 seconds
+    if (hamburger && menu) {
+        console.log("Hamburger menu found in DOM");
 
+        // Toggle menu when clicking the hamburger icon
+        hamburger.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent click event from affecting other elements
+            console.log("Hamburger menu clicked!");
+            menu.classList.toggle("show");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            if (menu.classList.contains("show") && event.target !== hamburger) {
+                menu.classList.remove("show");
+                console.log("Menu closed");
+            }
+        });
+
+        // Close menu when clicking a menu item (to allow navigation)
+        menuLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                menu.classList.remove("show"); // Close menu on link click
+                console.log(`Navigating to ${this.href}`);
+            });
+        });
+
+        // Prevent menu clicks from closing it
+        menu.addEventListener("click", function (event) {
+            event.stopPropagation(); // Stops clicks inside the menu from closing it
+        });
+    } else {
+        console.error("Hamburger menu or menu not found in DOM.");
+    }
+});
 
