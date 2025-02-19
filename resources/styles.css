@@ -31,8 +31,6 @@ body {
     background: rgba(0, 0, 0, 0.7); /* Dark background */
     backdrop-filter: blur(8px); /* Soft blur effect */
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); /* Smooth glow */
-    
-   /* border-bottom: 2px solid rgba(255, 255, 255, 0.2);*/
 }
 
 .navbar-video {
@@ -50,7 +48,6 @@ body {
     font-weight: bold;
     color: white;
     z-index: 2;
-    /*text-transform: uppercase;*/
     letter-spacing: 1px;
 }
 
@@ -75,7 +72,6 @@ body {
     border-radius: .3125em;
 }
 
-/* Dark overlay for text visibility */
 .navbar::before {
     content: "";
     position: absolute;
@@ -93,7 +89,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*padding: 60px 20px;*/
     background-color: #121212;
     flex-wrap: wrap;
     text-align: left;
@@ -113,7 +108,6 @@ body {
 
 .intro {
     max-width: 500px;
-    /*animation: bounce 3s infinite ease-in-out 0.5s;*/
 }
 
 .intro h1 {
@@ -179,10 +173,9 @@ body {
         z-index: 1000;
     }
 
-    /* This ensures menu is displayed when 'show' class is added */
+    /* Menu is displayed when 'show' class is added */
     .menu.show {
         display: flex !important;  
-        /*flex-direction: column;*/
         transform: translateY(0); 
     }
 }
@@ -196,7 +189,6 @@ body {
     padding: 1.25em .625em;
     transition: background-image 1s ease-in-out;
     margin-top: 3.125em;
-    /*border-top: 2px solid rgba(255, 255, 255, 0.2);*/
 }
 
 .footer-overlay {
@@ -245,8 +237,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./backgrnd-3.jpg') no-repeat center center/cover; /* Meaningful image as background */
-    color: black; /* Black text color */
+    background: url('./backgrnd-3.jpg') no-repeat center center/cover;
+    color: black;
     padding: 2em 1em;
     text-align: center;
     z-index: 2;
@@ -256,13 +248,13 @@ body {
 }
 
 .contact-content {
-    max-width: 75em; /* Increased width to allow more space */
+    max-width: 75em;
     padding: 1.75em;
-    background-color: #ffffff; /* White background for content */
+    background-color: #ffffff;
     border-radius: 0.625em;
     width: 100%;
-    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    word-wrap: break-word; /* Ensure text doesn't overflow */
+    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
 }
 
 .contact-content h1 {
@@ -287,7 +279,7 @@ body {
 
 /* Contact Box Styling */
 .contact-box {
-    background-color: #f7f7f7; /* Default light grey */
+    background-color: #f7f7f7;
     padding: 1.25em;
     border-radius: .625em;
     width: 15.625em;
@@ -298,11 +290,11 @@ body {
 
 /* Hover Effect */
 .contact-box:hover {
-    background-color: black; /* Change background to black */
-    color: white; /* Change text color to white */
+    background-color: black;
+    color: white;
 }
 
-/* Ensure links inside contact box also turn white */
+
 .contact-box a {
     color: black;
     text-decoration: none;
@@ -310,7 +302,7 @@ body {
 }
 
 .contact-box:hover a {
-    color: white; /* Make links white on hover */
+    color: white;
 }
 .contact-box:hover h3{
     color: white; 
@@ -336,7 +328,7 @@ body {
 
 /* Contact Icon Styling */
 .contact-icon {
-    width: 2.5em;  /* Adjust the size of the thumbnail */
+    width: 2.5em; 
     height: 2.5em;
     margin-bottom: 1em;
 }
@@ -357,7 +349,7 @@ body {
         padding: 1.25em;
     }
     .contact-box {
-        width: 90%; /* Make boxes take full width on smaller screens */
+        width: 90%;
         margin-bottom: 1em;
     }
     .contact-boxes {
@@ -379,9 +371,9 @@ section {
     padding: 2.5em;
     margin: 1.25em;
     border-radius: 0.625em;
-    background: #fff;  /* White background */
+    background: #fff; 
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.2); /* 3D effect */
-    color: #000; /* Black text */
+    color: #000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 2.5em;
 }
@@ -393,7 +385,7 @@ section:hover {
 
 /* Headings for all sections */
 section h2 {
-    color: #000; /* Black color for section headings */
+    color: #000;
     font-size: 32px;
     text-align: center;
     text-shadow: 2px 2px .625em rgba(255, 255, 255, 0.2);
@@ -401,42 +393,42 @@ section h2 {
 }
 
 /* Specific styling for each section */
-.about, .experience, .education, .achievements, .skills, .interests {
-    background-color: white;  /* White background */
+.about, .experience, .education, .achievements, .skills, .interests, .projects {
+    background-color: white; 
     padding: 1.25em;
     border-radius: 0.625em;
-    box-shadow: 5px 5px 1em rgba(0, 0, 0, 0.3), -5px -5px 1em rgba(255, 255, 255, 0.2); /* 3D effect */
+    box-shadow: 5px 5px 1em rgba(0, 0, 0, 0.3), -5px -5px 1em rgba(255, 255, 255, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about p, .experience p, .education p, .achievements p, .skills p, .interests p {
+.about p, .experience p, .education p, .achievements p, .skills p, .interests p, .projects p {
     font-size: 1em;
     line-height: 1.6;
-    color: #000; /* Black text for all sections */
+    color: #000; 
     text-align: justify;
 }
 .card{
     justify-content: left;
 }
 
-.achievements .card {
-    background-color: white; /* Default background */
+.achievements .card, .projects .card {
+    background-color: white; 
     padding: 1.25em;
     border-radius: .625em;
     box-shadow: 5px 5px 1em rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.achievements .card:hover {
-    background-color: #ffcc00; /* Change to any color you like */
-    color: black; /* Adjust text color for contrast */
-    transform: scale(1.05); /* Slight pop-out effect */
+.achievements .card:hover, .projects .card:hover{
+    background-color: #ffcc00; 
+    color: black; 
+    transform: scale(1.05); 
     box-shadow: 0px 0.625em 1.25em rgba(0, 0, 0, 0.4);
 }
 /* Hover Effect for All Sections */
 section:hover {
     transform: scale(1.03);
-    box-shadow: .625em .625em 1.875em rgba(0, 0, 0, 0.4), -10px -10px 30px rgba(255, 255, 255, 0.4); /* 3D hover effect */
+    box-shadow: .625em .625em 1.875em rgba(0, 0, 0, 0.4), -10px -10px 30px rgba(255, 255, 255, 0.4); 
 }
 
 /* Footer Text Color */
@@ -467,79 +459,19 @@ footer p {
 }
 .gallery-container {
     position: relative;
-    width: 18.75em; /* Adjust size as needed */
+    width: 18.75em; 
     height: 18.75em;
     margin: 3.125em auto;
   }
-  
-  /* The rotating circle */
-  .circle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-origin: center center;
-    animation: rotateCircle 20s linear infinite; /* Slow rotation */
-  }
-  
-  /* Position images evenly on the circle using transforms */
-  .circle img {
-    position: absolute;
-    width: 5em;
-    height: 5em;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 .25em .625em rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  /* For 5 images, they are evenly spaced every 72° (360/5) */
-  .circle img:nth-child(1) {
-    transform: rotate(0deg) translate(120px) rotate(0deg);
-  }
-  .circle img:nth-child(2) {
-    transform: rotate(72deg) translate(120px) rotate(-72deg);
-  }
-  .circle img:nth-child(3) {
-    transform: rotate(144deg) translate(120px) rotate(-144deg);
-  }
-  .circle img:nth-child(4) {
-    transform: rotate(216deg) translate(120px) rotate(-216deg);
-  }
-  .circle img:nth-child(5) {
-    transform: rotate(288deg) translate(120px) rotate(-288deg);
-  }
-  
-  /* Rotation animation for the circle */
-  @keyframes rotateCircle {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* When an image is active (clicked), enlarge it */
-  .circle img.active {
-    transform: scale(1.5) !important;
-    z-index: 10;
-  }
-  
-  /* Pause rotation when needed */
-  .circle.paused {
-    animation-play-state: paused;
-  }
+ 
 /* Headings for all subsections */
 h3{
     color: #000;
-    /*text-align: left;*/
     font-size: 1.75em;
     margin-bottom: .625em;
 }
 h4{
     color: #000;
-    /*text-align: left;*/
     font-size: 1.25em;
     margin-bottom: .625em;
 }
@@ -548,8 +480,9 @@ section p {
     margin-bottom: 1em;
 }
 
+
 /* Specific Styling for Experience Section */
-.experience .job, .education .degree, .achievements .achievement, .skills .skill {
+.experience .job, .education .degree, .achievements .achievement, .skills .skill, .projects, .project {
     background-color: #f9f9f9;
     padding: 1em;
     border-radius: .5em;
@@ -558,7 +491,7 @@ section p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience .job:hover, .education .degree:hover, .achievements .achievement:hover, .skills .skill:hover {
+.experience .job:hover, .education .degree:hover, .achievements .achievement:hover, .skills .skill:hover, .projects, .project:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -616,7 +549,6 @@ section p {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-   /* justify-content: center;*/
     gap: 1.25em;
 }
 @keyframes bounce {
@@ -648,7 +580,6 @@ section p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-   /* z-index: 10;*/
 }
 .video-container {
     position: fixed;
@@ -667,13 +598,12 @@ section p {
     z-index: 11;
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    background: rgba(0, 0, 0, 0.5); 
     padding: 1.875em;
     border-radius: .25em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    opacity: 0; /* Initially hidden */
+    opacity: 0; 
     animation: introFadeIn 1.5s ease-out forwards; 
-    /*animation: bounce 3s infinite ease-in-out;*/
     transition: transform .001s ease-out;
 }
 @media (max-width: 768px) {

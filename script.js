@@ -20,18 +20,9 @@ function changeBackground() {
 changeBackground();
 setInterval(changeBackground, 3000);
 };
-/*document.addEventListener("mousemove", function(event) {
-    let intro = document.querySelector("#intro-content");
-    let x = (window.innerWidth / 2 - event.pageX) / 30; 
-    let y = (window.innerHeight / 2 - event.pageY) / 30;
 
-    intro.style.transform = `translate(${x}px, ${y}px)`;
-});
-*/
-
+//Mobile devices menu option
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM fully loaded");
-
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu");
     const menuLinks = document.querySelectorAll(".menu a"); // Select all menu links
@@ -42,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Toggle menu when clicking the hamburger icon
         hamburger.addEventListener("click", function (event) {
             event.stopPropagation(); // Prevent click event from affecting other elements
-            console.log("Hamburger menu clicked!");
             menu.classList.toggle("show");
         });
 
@@ -50,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.addEventListener("click", function (event) {
             if (menu.classList.contains("show") && event.target !== hamburger) {
                 menu.classList.remove("show");
-                console.log("Menu closed");
             }
         });
 
@@ -58,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         menuLinks.forEach(link => {
             link.addEventListener("click", function () {
                 menu.classList.remove("show"); // Close menu on link click
-                console.log(`Navigating to ${this.href}`);
             });
         });
 
