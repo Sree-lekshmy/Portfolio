@@ -482,7 +482,7 @@ section p {
 
 
 /* Specific Styling for Experience Section */
-.experience .job, .education .degree, .achievements .achievement, .skills .skill, .projects, .project {
+.experience .job, .education .degree, .achievements .achievement, .skills .skill, .projects {
     background-color: #f9f9f9;
     padding: 1em;
     border-radius: .5em;
@@ -491,7 +491,7 @@ section p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.experience .job:hover, .education .degree:hover, .achievements .achievement:hover, .skills .skill:hover, .projects, .project:hover {
+.experience .job:hover, .education .degree:hover, .achievements .achievement:hover, .skills .skill:hover, .projects .project:hover {
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
